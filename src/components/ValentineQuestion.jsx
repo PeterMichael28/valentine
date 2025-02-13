@@ -25,22 +25,23 @@ const ValentineQuestion = ({ name, onAccept }) => {
    transition={{ duration: 0.5 }}
    className="text-center space-y-6"
   >
-   <motion.h2
-    initial={{ y: 20, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.2, duration: 0.5 }}
-    className="text-3xl font-bold text-pink-600"
-   >
-    Will you be my Valentine,
-   </motion.h2>
    <motion.p
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ delay: 0.4, duration: 0.5 }}
     className="text-4xl font-bold text-red-500"
    >
-    {name}?
+    Hi {name}!
    </motion.p>
+   <motion.h2
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.5 }}
+    className="text-3xl font-bold text-pink-600"
+   >
+    Can i be your Valentine?
+   </motion.h2>
+
    <motion.div
     animate={{ scale: [1, 1.2, 1] }}
     transition={{
