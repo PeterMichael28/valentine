@@ -29,7 +29,7 @@ const ValentineQuestion = ({ name, onAccept }) => {
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ delay: 0.4, duration: 0.5 }}
-    className="text-4xl font-bold text-red-500"
+    className="text-3xl md:text-4xl font-bold text-red-500"
    >
     Hi {name}!
    </motion.p>
@@ -37,7 +37,7 @@ const ValentineQuestion = ({ name, onAccept }) => {
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ delay: 0.2, duration: 0.5 }}
-    className="text-3xl font-bold text-pink-600"
+    className="text-2xl md:text-3xl font-bold text-pink-600"
    >
     Can i be your Valentine?
    </motion.h2>
@@ -72,7 +72,24 @@ const ValentineQuestion = ({ name, onAccept }) => {
      onMouseEnter={moveNoButton}
      onFocus={moveNoButton}
      whileHover={{ scale: 0.7 }}
-     className="px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-100 absolute"
+     className="px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-100 absolute hidden md:block"
+     style={{ touchAction: 'none' }}
+    >
+     No
+    </motion.button>
+    <motion.button
+     animate={noButtonPosition}
+     transition={{
+      type: 'spring',
+      stiffness: 1000,
+      damping: 20,
+      mass: 0.5,
+      velocity: 100,
+     }}
+     onClick={moveNoButton}
+     onFocus={moveNoButton}
+     whileHover={{ scale: 0.7 }}
+     className="px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-100 absolute md:hidden"
      style={{ touchAction: 'none' }}
     >
      No

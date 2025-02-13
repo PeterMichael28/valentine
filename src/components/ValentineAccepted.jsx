@@ -24,7 +24,7 @@ const ValentineAccepted = ({ name }) => {
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ delay: 0.4, duration: 0.5 }}
-    className="text-2xl text-red-500"
+    className="text-2xl font-medium text-red-500"
    >
     {/* { name } */}I am now your Valentine!
    </motion.p>
@@ -43,9 +43,9 @@ const ValentineAccepted = ({ name }) => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 0.8, duration: 0.5 }}
-    className="text-lg text-gray-600 mt-4"
+    className="md:text-lg text-gray-600 mt-4"
    >
-    Time to plan something special for me!
+    Time to plan something special for me! 🤗😊
    </motion.p>
   </motion.div>
  );
